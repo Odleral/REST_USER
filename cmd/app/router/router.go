@@ -13,16 +13,11 @@ func New(a *app.App) *chi.Mux {
 
 	r.Route("/api/v1", func(r chi.Router){
 		r.Use(middleware.ContentTypeJson)
-		//User handlers
 		r.Method("POST", "/user", requestlog.NewHandler(a.HandleCreateUser, l))
 		r.Method("PUT", "/user/{uuid}", requestlog.NewHandler(a.HandleUpdateUser, l))
 		r.Method("GET", "/user/{uuid}", requestlog.NewHandler(a.HandleFindUser, l))
 		r.Method("DELETE", "/user/{uuid}", requestlog.NewHandler(a.HandleDeleteUser, l))
 	})
-
-	//Kubelet checker
-	//r.Get("/healthz/liveness", app.HandleLive)
-	//r.Method("GET", "/healthz/readiness", requestlog.NewHandler(a.HandleReady, l))
 
 	return r
 }
