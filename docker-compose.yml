@@ -3,13 +3,13 @@ services:
   app:
     build:
       context: .
-      dockerfile: ./docker/rest/Dockerfile
+      dockerfile: build/docker/rest/Dockerfile
     env_file:
-      - ./docker/rest/.env
+      - build/docker/rest/.env
     ports:
       - "80:80"
   postgres:
-    build: ./docker/postgres/
+    build: build/docker/postgres/
     restart: always
     environment:
       - POSTGRES_USER=user

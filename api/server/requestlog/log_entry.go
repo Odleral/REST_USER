@@ -38,8 +38,8 @@ type writeCounter int64
 type responseStats struct {
 	w http.ResponseWriter
 	hsize int64
-	wc writeCounter
-	code int
+	wc    writeCounter
+	code  int
 }
 
 func ipFromHostPort(hp string) string{

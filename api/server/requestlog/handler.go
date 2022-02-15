@@ -14,7 +14,7 @@ type Handler struct {
 	logger *logger.Logger
 }
 
-func NewHandler(h http.HandlerFunc, l *logger.Logger) *Handler{
+func NewHandler(h http.HandlerFunc, l *logger.Logger) *Handler {
 	return &Handler{
 		handler: h,
 		logger: l,
@@ -25,13 +25,13 @@ func (h *Handler) ServeHTTP(w http.ResponseWriter, r *http.Request){
 	start := time.Now()
 
 	le := &logEntry{
-		ReceivedTime: start,
-		RequestMethod: r.Method,
-		RequestURL: r.URL.String(),
+		ReceivedTime:      start,
+		RequestMethod:     r.Method,
+		RequestURL:        r.URL.String(),
 		RequestHeaderSize: headerSize(r.Header),
-		UserAgent: r.UserAgent(),
-		Proto: r.Proto,
-		RemoteIP: ipFromHostPort(r.RemoteAddr),
+		UserAgent:         r.UserAgent(),
+		Proto:             r.Proto,
+		RemoteIP:          ipFromHostPort(r.RemoteAddr),
 	}
 
 	if addr, ok := r.Context().Value(http.LocalAddrContextKey).(net.Addr); ok {

@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	gr "gitlab.com/odleral/geoportal-go/adapter/gorm"
+	"gitlab.com/odleral/geoportal-go/api/server/router"
 	"gitlab.com/odleral/geoportal-go/cmd/app/app"
-	"gitlab.com/odleral/geoportal-go/cmd/app/router"
 	"gitlab.com/odleral/geoportal-go/config"
+	gr "gitlab.com/odleral/geoportal-go/internal/adapter/gorm"
 	lr "gitlab.com/odleral/geoportal-go/util/logger"
 	vr "gitlab.com/odleral/geoportal-go/util/validator"
 	"net/http" //nolint:gci

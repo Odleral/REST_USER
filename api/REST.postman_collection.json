@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "b07a20c6-e34d-4491-b546-650fee6c7db1",
+		"name": "REST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\":\"FirstName\",\n    \"lastName\":\"LastName\",\n    \"email\":\"example@example\",\n    \"age\":99\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:80/api/v1/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:80/api/v1/user/<uuid>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"<uuid>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\":\"FirstName\",\n    \"lastName\":\"LastName\",\n    \"email\":\"example@example\",\n    \"age\":99\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:80/api/v1/user/<uuid>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"<uuid>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\":\"FirstName\",\n    \"lastName\":\"LastName\",\n    \"email\":\"example@example\",\n    \"age\":99\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:80/api/v1/user/<uuid>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"<uuid>"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

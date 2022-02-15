@@ -2,7 +2,8 @@ package middleware_test
 
 import (
 	"fmt"
-	"gitlab.com/odleral/geoportal-go/cmd/app/router/middleware" //nolint:gci
+	"gitlab.com/odleral/geoportal-go/api/server/router/middleware"
+	//nolint:gci
 	"net/http"
 	"net/http/httptest"
 	"testing" //nolint:gci

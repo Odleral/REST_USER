@@ -223,3 +223,7 @@ func (app *App) HandleDeleteUser(w http.ResponseWriter, r *http.Request) {
 	app.logger.Info().Msgf("User deleted %s", uuid)
 	w.WriteHeader(http.StatusAccepted)
 }
+
+func (app *App) HandleAuthUser(w http.ResponseWriter, r * http.Request){
+
+}
